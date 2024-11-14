@@ -69,6 +69,11 @@ article a:hover {
     text-decoration: underline;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
 /* Footer */
 footer {
     background: #333;
