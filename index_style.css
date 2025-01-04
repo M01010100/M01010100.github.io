@@ -1,5 +1,4 @@
-/* Basic Reset */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,10 +7,12 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: black;
+    color: white
 }
 
 nav {
-    background-color: #333;
+    background-color: #3f3f3f;
     padding: 1rem;
 }
 
@@ -35,7 +36,6 @@ nav a:hover {
     color: #f0f0f0;
 }
 
-/* Sections */
 section {
     padding: 2rem;
     margin: 2rem 0;
@@ -43,15 +43,15 @@ section {
 
 section h2 {
     margin-bottom: 1rem;
-    color: #333;
+    color: #ffffff;
 }
 
-/* Projects */
+
 .project {
     margin-bottom: 1.5rem;
 }
 
-/* Blog */
+
 article {
     margin-bottom: 1.5rem;
 }
@@ -70,14 +70,15 @@ article a:hover {
 }
 
 table {
-    width: 100%;
+    width: 50%;
     border-collapse: collapse;
 }
 
-/* Footer */
+
 footer {
-    background: #333;
-    color: #fff;
+    background: #000000;
+    /*color: #fff;*/
+    color: green;
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
