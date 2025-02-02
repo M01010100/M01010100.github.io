@@ -9,7 +9,7 @@
 <nav>
   <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="projectIndex">Projects</a></li>
+      <li><a href="projectIndex.html">Projects</a></li>
       <li><a href="proj1_paper.html">Paper</a></li>
       <li><a href="proj1_slides.html">Slides</a></li>      
   </ul>
@@ -25,18 +25,18 @@
         In this project, I intended to learn about Machine Learning and ways to secure/ increase privacy to start my journey into my master's degree and the field. It leads me elsewhere,
         I went down the rabbit hole of Homomorphic Encryption and Secure Multi-Party Computation. I learned about the different types of encryption and how they can be used to secure data.
         To the point where I am more interested in Cryptography and the math behind it than Machine Learning itself. I have read papers, watched lectures and more on this subject. 
-       <h2>Constraints</h2>
+       <h3>Constraints</h3>
         For Capstone projects we select Limitations to keep the scope of this project contained, I will admit I had very loose constraints due to my topic. The constraints I did apply were 
         to use only python for the language and keep it related to Machine Learning. The final and over-arching constraint is to keep the paper at a Freshman reading level. So for my project this meant leaving out 
         any coversation on how the Math operates behind the blinds, I did metion the basics, algebriac structures and Polynomials.     
-        <h2>Problems</h2>
+        <h3>Problems</h3>
         One major problem I encountered outside of the constraints was the nature of the project. As an NCS major I recieved little education on how the encryption algorithms and ciphers compute, We learned what their used for and their rough implementation, 
         but ouside of this, nothing. So ontop of implememnting a research level encryption scheme, Ihad no basis to start my understanding of cryptography. This I would overcome and continue learning after I finished my capstone. I endedup modify some model I founds
         slowly combining and mdifing them together to work with my data and gain the results I was looking. 
-        <h2>Results</h2>
+        <h3>Results</h3>
         I Achieved my desired result through trial and error, ending with better results on the encrypted data but at the cost of a drastic time increase. The prediction accuracy was higher on the ecrypted data then the un-encrypted data. The cost penalties do 
         outweigh the results. from a couple seconds to around 5 minutes to complete. From one hundred megabytes to 2 gigabytes of Ram required to run their respective model. For a classical logistic regression model. 
-        <h2>Changes I would Make</h2>
+        <h3>Changes I would Make</h3>
         After completing this project there are some changes I would like to make or wish I knew of while hacking away, other and better FHE libraries amd frameworks. Sush as <a href="https://github.com/tfhe/tfhe">TFHE</a> or <a href="https://docs.zama.ai/concrete-ml">concrete ML</a> by Zama AI.
         Due to TENSeal beign older and from Microsoft it had more material about it and being implemented which is why I decided to use it. These newer libraries have modern featurea and easier implementations, such as working with scklearn models. 
         </p>
@@ -44,21 +44,22 @@
        </section>
 
        <section id="content">
-        <h1>Paper and slides</h1>
         <p>The paper and slides are located under their respective section in the nav bar</p>
-        <h1>Code</h1>
+        <h4>Code</h3>
         <ul>
-            <li><a href="https://github.com/M01010100/Capstone_2024_NCS">github</a></li>
+            <ul>
+                <li><a href="https://github.com/M01010100/Capstone_2024_NCS">github</a></li>
+            </ul>
         </ul>
        </section>
 
 
        <section id="Methods">
-        <h1>Library</h1>
+        <h3>Library</h3>
         <P>For this project I used the TenSEAL library, a python wrapper for the SEAL library by Microsoft.</P><br>
-        <h1>Model</h1>
+        <h3>Model</h3>
         <p>For the model I used a simple Logistic Regression model to perform basic fraud detection.</p><br>
-        <h1>Dataset</h1>
+        <h3>Dataset</h3>
         <p>The dataset consisted of 6 features but with nearly 40,000 sets. This allowed for a good vartiation when shuffling.</p>
         </section>
        <br>
