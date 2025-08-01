@@ -203,7 +203,8 @@ section h2::after {
 }
 
 section h3 {
-    color: #34495e;
+    /* color: #34495e; */
+    color: #fff;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }

@@ -3,26 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranked Choice Vote</title>
+    <title>Ranked Choice Voting - Matthew Townsend</title>
     <link rel="stylesheet" href="index_style.css">
+    <script src="nav_mobile.js" defer></script>
 </head>
+
 <body>
-<nav>
-  <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projectIndex">Project Index</a></li>
-        <li><a href="#Preface">Preface</a></li>
-  </ul>
-</nav>
-<section id="Preface">
-    <h1>Ranked Choice Voting</h1>
-    <p>Ranked Choice Voting is a voting system that allows voters to rank candidates in order of preference. This system is used in many countries around the world and in several US cities. The system is designed to ensure that the winning candidate has the broadest possible support among voters. In this project, we will explore how Ranked Choice Voting works and how it can be implemented in the United States.</p>
-    <h2>How Ranked Choice Voting Works</h2>
-    <p>Ranked Choice Voting is a preferential voting system in which voters rank candidates in order of preference. In a Ranked Choice Voting election, voters are asked to rank candidates in order of preference, with their first choice being their top preference, their second choice being their second preference, and so on. Voters can rank as many candidates as they like, and they are not required to rank all candidates on the ballot.</p>
-    <p>Once all the votes are cast, the votes are counted in rounds. In each round, the candidate with the fewest first-choice votes is eliminated, and their votes are redistributed to the remaining candidates based on the voters' second choices. This process continues until one candidate receives a majority of the votes and is declared the winner.</p>
-    <h2>Benefits of Ranked Choice Voting</h2>
-    <p>Ranked Choice Voting has several benefits over traditional plurality voting systems. One of the main benefits is that it ensures that the winning candidate has the broadest possible support among voters. In a traditional plurality voting system, a candidate can win with less than a majority of the votes, which can lead to a lack of legitimacy and trust in the electoral process. Ranked Choice Voting also encourages candidates to run positive campaigns and reach out to a broader range of voters, as they need to appeal to a majority of voters to win.</p>
-</section>
-<section id="Implementation">
-    <h2>Implementation of Ranked Choice Voting</h2>
-    <p> Code will be available once I upload it to github</p>
+    <nav class="project-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Matthew Townsend</div>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="projectIndex.html">📁 All Projects</a></li>
+                <li><a href="proj_RCV.html" class="active">📄 Overview</a></li>
+                <li><a href="https://github.com/M01010100" target="_blank">💻 GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="overview">
+                <div class="content-card">
+                    <h1>Ranked Choice Voting System</h1>
+                    
+                    <div class="project-meta">
+                        <strong>Democratic Voting System Implementation</strong>
+                    </div>
+                    
+                    <div class="project-description">
+                        <p>
+                            Ranked Choice Voting is a voting system that allows voters to rank candidates in order of preference. This system is used in many countries around the world and in several US cities. The system is designed to ensure that the winning candidate has the broadest possible support among voters. In this project, we explore how Ranked Choice Voting works and how it can be implemented in various contexts.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="how-it-works">
+                <div class="content-card">
+                    <h2>How Ranked Choice Voting Works</h2>
+                    
+                    <div class="method-section">
+                        <h4>Voting Process</h4>
+                        <p>Ranked Choice Voting is a preferential voting system in which voters rank candidates in order of preference. Voters can rank as many candidates as they like, with their first choice being their top preference, their second choice being their second preference, and so on.</p>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Counting Rounds</h4>
+                        <p>Once all votes are cast, they are counted in rounds. In each round, the candidate with the fewest first-choice votes is eliminated, and their votes are redistributed to the remaining candidates based on the voters' second choices. This process continues until one candidate receives a majority of the votes.</p>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Winner Determination</h4>
+                        <p>The process continues until one candidate achieves a majority of active votes and is declared the winner, ensuring broader support among the electorate.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="benefits">
+                <div class="content-card">
+                    <h2>Benefits of Ranked Choice Voting</h2>
+                    
+                    <div class="resource-grid">
+                        <div class="resource-link">
+                            <span>🗳️</span>
+                            <div>
+                                <strong>Majority Support</strong>
+                                <p>Ensures the winning candidate has broad support among voters</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>🤝</span>
+                            <div>
+                                <strong>Positive Campaigns</strong>
+                                <p>Encourages candidates to appeal to a broader range of voters</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>⚖️</span>
+                            <div>
+                                <strong>Enhanced Legitimacy</strong>
+                                <p>Reduces issues with plurality winners lacking majority support</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>🎯</span>
+                            <div>
+                                <strong>Reduced Spoiler Effect</strong>
+                                <p>Minimizes strategic voting and vote splitting concerns</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="implementation">
+                <div class="content-card">
+                    <h2>Implementation Status</h2>
+                    <div class="project-description">
+                        <p>
+                            The code implementation for this Ranked Choice Voting system is currently in development. The complete source code will be made available on GitHub once the implementation is finalized and thoroughly tested.
+                        </p>
+                    </div>
+                    
+                    <div class="resource-grid">
+                        <a href="https://github.com/M01010100" class="resource-link" target="_blank">
+                            <span>💻</span>
+                            <div>
+                                <strong>GitHub Repository</strong>
+                                <p>Source code will be available here upon completion</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="content-card text-center mt-2">
+                <p>
+                    <a href="projectIndex.html">← Back to All Projects</a> | 
+                    <a href="index.html">🏠 Home</a>
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -3,79 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASL-Interpreter</title>
+    <title>ASL Interpreter - Matthew Townsend</title>
     <link rel="stylesheet" href="index_style.css">
+    <script src="nav_mobile.js" defer></script>
 </head>
+
 <body>
-<nav>
-  <ul>
-        <li><a href="index.html">Home</a></li>      
-        <li><a href="projectIndex">Projects</a></li>
-        <li><a href="#vercel">Vercel</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#challenges">Challenges</a></li>
-        <li><a href="#future">Future</a></li>
-  </ul>
-</nav>
-<body>
-    <!-- Home Section -->
-    <section id="home">
-       <h1>AI based American Sign Language Interpreter</h1>
-       <p>Gatehacks Fall(2024)</p>
-       <br>
-        <p>Our project is an AI-based American Sign Language Interpreter. The project uses a camera to capture the sign language and then uses an API to return the response.
-           This response is displayed on the screen along with the picture of the previous command. On the left side of the screen, where the results are displayed, there is a session history.
-           The history consisted of a small image of the sign,(photo taken by the camera) and the command text. This project was developed over 24 hours, along with a small pitch
-           we gave to the judges. 
-        </p>
-    </section>
-    <section id="vercel">
-        <h2>Vercel</h2>
-        <p>
-        The Code for our project can be found at the following link: <a href="https://gatehacks2024-hackathon.vercel.app/">Vercel</a>
-        The code does lack an API key, so it will not work without one, but the GUI can be seen.
-        <a href="https://github.com/M01010100/gatehack2024">Fork of Repo</a>
-        </p>
-    </section>
+    <nav class="project-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Matthew Townsend</div>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="projectIndex.html">📁 All Projects</a></li>
+                <li><a href="proj3.html" class="active">📄 Overview</a></li>
+                <li><a href="https://gatehacks2024-hackathon.vercel.app/" target="_blank">🚀 Live Demo</a></li>
+                <li><a href="https://github.com/M01010100/gatehack2024" target="_blank">💻 GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <section id="tools">
-        <h2>Tools</h2>
-        <p>Our project was developed using the following tools:</p>
-        <ul>
-            <li>Next.js Framework</li>
-            <li>React.js</li>
-            <li>OpenAi API integration</li>
-        </ul>
-        <p>
-        The project was developed using the Next.js framework and React.js. The OpenAi API was integrated into the project to provide AI functionality. 
-        We conducted prompt engineering on the states so that when the picture is taken, only the translation is returned and no further explanation or similar words are provided.
-        </p>
-        <br>
-    </section>
-    
-    <section id="challenges">
-        <h2>Challenges</h2>
-        <p>Our team faced several challenges during the development of the project. The first challenge was the integration of the OpenAi API.
-        </p>
-        <br>
-    </section>
+    <main>
+        <div class="container">
+            <section id="home">
+                <div class="content-card">
+                    <h1>AI-Based American Sign Language Interpreter</h1>
+                    
+                    <div class="project-meta">
+                        <strong>Gatehacks Fall 2024 - 3rd Place Overall</strong>
+                    </div>
+                    
+                    <div class="project-description">
+                        <p>
+                            Our project is an AI-based American Sign Language Interpreter that uses a camera to capture sign language and returns interpretations through an API. The response is displayed on the screen along with the picture of the previous command. On the left side of the screen, there is a session history consisting of small images of the signs (photos taken by the camera) and the command text. This project was developed over 24 hours, along with a presentation we gave to the judges.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-    <section id="Team">
-        <h2>Team Members</h2>
-        <ul>
-            <li>Matthew Townsend</li>
-            <li>Daniel Jeong</li>
-            <li>Osvaldo Lopez</li>
-            <li>Tanner Brawdy</li>
-        </ul>
-    </section>
+            <section id="demo">
+                <div class="content-card">
+                    <h2>Live Demo & Code</h2>
+                    <div class="resource-grid">
+                        <a href="https://gatehacks2024-hackathon.vercel.app/" class="resource-link" target="_blank">
+                            <span>🚀</span>
+                            <div>
+                                <strong>Live Demo</strong>
+                                <p>View the application interface (API key required for full functionality)</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/M01010100/gatehack2024" class="resource-link" target="_blank">
+                            <span>💻</span>
+                            <div>
+                                <strong>GitHub Repository</strong>
+                                <p>Complete source code and documentation</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-    <section id="future">
-        <h2>Future</h2>
-        <p>
-        At some point in the future, I intend to build onto the backend of the project. Possibly implement a opensource model for the AI, or even build our model which we decided was not possible in the time frame.
-        </p>
-        <br>
-    </section>
-    
+            <section id="tools">
+                <div class="content-card">
+                    <h2>Technology Stack</h2>
+                    <div class="method-section">
+                        <h4>Frontend Framework</h4>
+                        <p>Built using Next.js framework with React.js for a responsive and modern user interface.</p>
+                    </div>
+                    <div class="method-section">
+                        <h4>AI Integration</h4>
+                        <p>OpenAI API integration provides AI functionality for sign language interpretation. We conducted prompt engineering to ensure only translations are returned without additional explanations.</p>
+                    </div>
+                    <div class="method-section">
+                        <h4>Core Technologies</h4>
+                        <ul>
+                            <li>Next.js Framework</li>
+                            <li>React.js</li>
+                            <li>OpenAI API integration</li>
+                            <li>Real-time camera capture</li>
+                            <li>Session history management</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="team">
+                <div class="content-card">
+                    <h2>Team Members</h2>
+                    <div class="resource-grid">
+                        <div class="resource-link">
+                            <span>👤</span>
+                            <div>
+                                <strong>Matthew Townsend</strong>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>👤</span>
+                            <div>
+                                <strong>Daniel Jeong</strong>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>👤</span>
+                            <div>
+                                <strong>Osvaldo Lopez</strong>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>👤</span>
+                            <div>
+                                <strong>Tanner Brawdy</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="challenges">
+                <div class="content-card">
+                    <h2>Development Challenges</h2>
+                    <div class="method-section">
+                        <h4>API Integration</h4>
+                        <p>The primary challenge was integrating the OpenAI API effectively within the 24-hour timeframe while ensuring reliable performance.</p>
+                    </div>
+                    <div class="method-section">
+                        <h4>Real-time Processing</h4>
+                        <p>Implementing real-time camera capture and processing while maintaining application responsiveness required careful optimization.</p>
+                    </div>
+                    <div class="method-section">
+                        <h4>Prompt Engineering</h4>
+                        <p>Fine-tuning AI prompts to return only accurate translations without additional context or similar word suggestions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="future">
+                <div class="content-card">
+                    <h2>Future Development</h2>
+                    <div class="project-description">
+                        <p>
+                            In the future, I plan to enhance the backend of the project by potentially implementing an open-source model for AI functionality, or even building our own custom model. During the hackathon, we determined that training our own model wasn't feasible within the time constraints, but this remains a goal for future iterations.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="content-card text-center mt-2">
+                <p>
+                    <a href="projectIndex.html">← Back to All Projects</a> | 
+                    <a href="index.html">🏠 Home</a>
+                </p>
+            </div>
+        </div>
+    </main>
 </body>
+</html>

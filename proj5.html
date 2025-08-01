@@ -3,33 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capstone-FHE</title>
+    <title>Home Server Infrastructure - Matthew Townsend</title>
     <link rel="stylesheet" href="index_style.css">
+    <script src="nav_mobile.js" defer></script>
 </head>
-<nav>
-  <ul>
-      <li><a href="index.html">Home</a></li>
-        
-  </ul>
-</nav>
 
 <body>
-    <section id="home">
-    <h1>
-        The Home Server Build
-    </h1>
-    <ul>
-        <li>Dell Poweredge R730</li>
-        <li>2x E5-2680v3</li>
-        <li>384GB of Ram</li>
-    </ul>
-    <h2>
-        Why?
-    </h2>
-    <p>
-        I procured this server orignally as a some what joke regarding my captone project. I had crashed three
-        google collab session several time in earlier, non functioning versions of it. Since purchasing I began to run LLMs on it 
-        in addition to virtualization and "Lab" enviroments.
-    </p>
-    </section>
+    <nav class="project-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Matthew Townsend</div>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="projectIndex.html">📁 All Projects</a></li>
+                <li><a href="proj5.html" class="active">📄 Overview</a></li>
+                <li><a href="https://github.com/M01010100" target="_blank">💻 GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="overview">
+                <div class="content-card">
+                    <h1>Home Server Infrastructure Build</h1>
+                    
+                    <div class="project-meta">
+                        <strong>Personal Lab & Development Environment</strong>
+                    </div>
+                    
+                    <div class="project-description">
+                        <p>
+                            This project showcases my personal home server setup, built around enterprise-grade hardware to support various development, research, and learning activities. What started as a somewhat humorous response to crashing Google Colab sessions has evolved into a comprehensive infrastructure for LLM hosting, virtualization, and laboratory environments.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="specifications">
+                <div class="content-card">
+                    <h2>Hardware Specifications</h2>
+                    
+                    <div class="resource-grid">
+                        <div class="resource-link">
+                            <span>🖥️</span>
+                            <div>
+                                <strong>Server Platform</strong>
+                                <p>Dell PowerEdge R730 - Enterprise 2U rack server</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>⚡</span>
+                            <div>
+                                <strong>Processors</strong>
+                                <p>2x Intel E5-2680v3 (24 cores, 48 threads total)</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>💾</span>
+                            <div>
+                                <strong>Memory</strong>
+                                <p>384GB DDR4 ECC RAM for extensive virtualization</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>🔧</span>
+                            <div>
+                                <strong>Architecture</strong>
+                                <p>Enterprise-grade redundant power, cooling, and management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="purpose">
+                <div class="content-card">
+                    <h2>Why Build a Home Server?</h2>
+                    
+                    <div class="method-section">
+                        <h4>Origin Story</h4>
+                        <p>I originally acquired this server as a somewhat humorous response to repeatedly crashing Google Colab sessions during earlier, non-functioning versions of my capstone project. The limitations of cloud platforms for intensive computing tasks became apparent during my research work.</p>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Current Applications</h4>
+                        <p>Since the initial setup, the server has evolved to support a wide range of activities including running Large Language Models (LLMs), extensive virtualization for development environments, and creating isolated "lab" environments for security research and testing.</p>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Learning Platform</h4>
+                        <p>The server serves as a hands-on learning platform for enterprise technologies, network administration, virtualization technologies, and infrastructure management skills essential for cybersecurity and systems administration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="use-cases">
+                <div class="content-card">
+                    <h2>Use Cases & Applications</h2>
+                    
+                    <div class="resource-grid">
+                        <div class="resource-link">
+                            <span>🤖</span>
+                            <div>
+                                <strong>LLM Hosting</strong>
+                                <p>Running and testing various large language models locally</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>🖨️</span>
+                            <div>
+                                <strong>Virtualization</strong>
+                                <p>Multiple VM environments for different projects and testing</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>🔬</span>
+                            <div>
+                                <strong>Security Labs</strong>
+                                <p>Isolated environments for cybersecurity research and practice</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>💻</span>
+                            <div>
+                                <strong>Development</strong>
+                                <p>High-performance computing for intensive development tasks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="future">
+                <div class="content-card">
+                    <h2>Future Enhancements</h2>
+                    <div class="project-description">
+                        <p>
+                            Future plans include expanding storage capabilities, implementing advanced networking configurations, and exploring container orchestration technologies. The server continues to evolve as my learning and project requirements grow.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="content-card text-center mt-2">
+                <p>
+                    <a href="projectIndex.html">← Back to All Projects</a> | 
+                    <a href="index.html">🏠 Home</a>
+                </p>
+            </div>
+        </div>
+    </main>
 </body>
+</html>
