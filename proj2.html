@@ -3,39 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industrial Security</title>
+    <title>Industrial Security - Matthew Townsend</title>
     <link rel="stylesheet" href="index_style.css">
+    <script src="nav_mobile.js" defer></script>
 </head>
-<nav>
-  <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projectIndex">Projects</a></li>
-      <li><a href="Lab_1.html">Lab 1</a></li>
-      <li><a href="Lab_2.html">Lab 2</a></li>
-      <li><a href="Lab_3.html">Lab 3</a></li>
-      <li><a href="Lab_4.html">Lab 4</a></li>
-      <li><a href="Lab_5.html">Lab 5</a></li>
-      <li><a href="Lab_6.html">Lab 6</a></li>
-      <li><a href="Lab_7.html">Lab 7</a></li>
-      <li><a href="Lab_8.html">Lab 8</a></li>
-      <li><a href="Lab_9.html">Lab 9</a></li>
-  </ul>
-</nav>
+
 <body>
-    <section id="#about">
-        <h1>Industrial Network Security</h1>
-        <br>
-        <h2>Overview</h2>
-            <P> In this project I created a basic LED circuit and used <a href="https://autonomylogic.com/">openPLC</a> to control the circuit. Then connect the circuit to a Scadabr instance
-            to monitor and remotely control the circuit. Following this I used NetCat to send a payload to remotely turn on and off the circuit. This was done by intercepting a command 
-            and resending it by spoofing the sender IP to be that of the Scadabr server resulting in the openPLC running the command.
-            </P>
-        <br>
-        <br>
-        <h2>More Information</h2>
-            <p> This project was conducted during one of my classes at MVCC, CI246 - Critical Infrastructure Security. This project took the form of several labs throughout the semester, that is the reason
-            for the dates being spread over two months and the format of the project. It was because of these labs I did a separate project for another class on Nmap, after looking into other tools that 
-            can be used for network searching/scanning. 
-        </p>
-    </section>
+    <nav class="project-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Matthew Townsend</div>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="projectIndex.html">📁 All Projects</a></li>
+                <li><a href="proj2.html" class="active">📄 Overview</a></li>
+                <li><a href="Lab_1.html">🔬 Lab 1</a></li>
+                <li><a href="Lab_2.html">🔬 Lab 2</a></li>
+                <li><a href="Lab_3.html">🔬 Lab 3</a></li>
+                <li><a href="Lab_4.html">🔬 Lab 4</a></li>
+                <li><a href="Lab_5.html">🔬 Lab 5</a></li>
+                <li><a href="Lab_6.html">🔬 Lab 6</a></li>
+                <li><a href="Lab_7.html">🔬 Lab 7</a></li>
+                <li><a href="Lab_8.html">🔬 Lab 8</a></li>
+                <li><a href="Lab_9.html">🔬 Lab 9</a></li>
+                <li><a href="https://github.com/M01010100" target="_blank">💻 GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="about">
+                <div class="content-card">
+                    <h1>Industrial Network Security</h1>
+                    
+                    <div class="project-meta">
+                        <strong>MVCC - CI246: Critical Infrastructure Security</strong>
+                    </div>
+
+                    <h2>Overview</h2>
+                    <div class="project-description">
+                        <p>
+                            In this project I created a basic LED circuit and used <a href="https://autonomylogic.com/">OpenPLC</a> to control the circuit. Then connected the circuit to a ScadaBR instance to monitor and remotely control the circuit. Following this I used NetCat to send a payload to remotely turn on and off the circuit. This was done by intercepting a command and resending it by spoofing the sender IP to be that of the ScadaBR server, resulting in the OpenPLC running the command.
+                        </p>
+                    </div>
+
+                    <h2>More Information</h2>
+                    <p>
+                        This project was conducted during one of my classes at MVCC, CI246 - Critical Infrastructure Security. This project took the form of several labs throughout the semester—that is the reason for the dates being spread over two months and the format of the project. It was because of these labs I did a separate project for another class on Nmap, after looking into other tools that can be used for network searching/scanning.
+                    </p>
+                </div>
+            </section>
+
+            <section id="labs">
+                <div class="content-card">
+                    <h2>Laboratory Exercises</h2>
+                    <div class="resource-grid">
+                        <a href="Lab_1.html" class="resource-link">
+                            <span>🔬</span>
+                            <div>
+                                <strong>Lab 1</strong>
+                                <p>Initial setup and configuration</p>
+                            </div>
+                        </a>
+                        <a href="Lab_2.html" class="resource-link">
+                            <span>🔬</span>
+                            <div>
+                                <strong>Lab 2</strong>
+                                <p>Network analysis and mapping</p>
+                            </div>
+                        </a>
+                        <a href="Lab_3.html" class="resource-link">
+                            <span>🔬</span>
+                            <div>
+                                <strong>Lab 3</strong>
+                                <p>Security implementation</p>
+                            </div>
+                        </a>
+                        <a href="Lab_4.html" class="resource-link">
+                            <span>🔬</span>
+                            <div>
+                                <strong>Lab 4</strong>
+                                <p>Vulnerability assessment</p>
+                            </div>
+                        </a>
+                        <a href="Lab_5.html" class="resource-link">
+                            <span>🔬</span>
+                            <div>
+                                <strong>Lab 5</strong>
+                                <p>Attack simulation</p>
+                            </div>
+                        </a>
+                        <a href="Lab_6.html" class="resource-link">
+                            <span>🔬</span>
+                            <div>
+                                <strong>Lab 6</strong>
+                                <p>Defense mechanisms</p>
+                            </div>
+                        </a>
+                        <a href="Lab_7.html" class="resource-link">
+                            <span>🔬</span>
+                            <div>
+                                <strong>Lab 7</strong>
+                                <p>Monitoring and detection</p>
+                            </div>
+                        </a>
+                        <a href="Lab_8.html" class="resource-link">
+                            <span>🔬</span>
+                            <div>
+                                <strong>Lab 8</strong>
+                                <p>Response protocols</p>
+                            </div>
+                        </a>
+                        <a href="Lab_9.html" class="resource-link">
+                            <span>🔬</span>
+                            <div>
+                                <strong>Lab 9</strong>
+                                <p>Final assessment and review</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="content-card text-center mt-2">
+                <p>
+                    <a href="projectIndex.html">← Back to All Projects</a> | 
+                    <a href="index.html">🏠 Home</a>
+                </p>
+            </div>
+        </div>
+    </main>
 </body>
+</html>

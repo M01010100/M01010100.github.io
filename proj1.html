@@ -3,65 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capstone-FHE</title>
+    <title>Capstone-FHE - Matthew Townsend</title>
     <link rel="stylesheet" href="index_style.css">
+    <script src="nav_mobile.js" defer></script>
 </head>
-<nav>
-  <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projectIndex.html">Projects</a></li>
-      <li><a href="proj1_paper.html">Paper</a></li>
-      <li><a href="proj1_slides.html">Slides</a></li>      
-  </ul>
-</nav>
 
 <body>
-    <section id="home">
-       <h1>Capstone: Privacy-Preserving Machine Learning Training</h1>
-       <p>
-        SUNY Polytechnic Institute Fall 2024.
-        <br>
-        <br>
-        In this project, I intended to learn about Machine Learning and ways to secure/ increase privacy to start my journey into my master's degree and the field. It leads me elsewhere,
-        I went down the rabbit hole of Homomorphic Encryption and Secure Multi-Party Computation. I learned about the different types of encryption and how they can be used to secure data.
-        To the point where I am more interested in Cryptography and the math behind it than Machine Learning itself. I have read papers, watched lectures and more on this subject. 
-       <h3>Constraints</h3>
-        For Capstone projects we select Limitations to keep the scope of this project contained, I will admit I had very loose constraints due to my topic. The constraints I did apply were 
-        to use only python for the language and keep it related to Machine Learning. The final and over-arching constraint is to keep the paper at a Freshman reading level. So for my project this meant leaving out 
-        any coversation on how the Math operates behind the blinds, I did metion the basics, algebriac structures and Polynomials.     
-        <h3>Problems</h3>
-        One major problem I encountered outside of the constraints was the nature of the project. As an NCS major I recieved little education on how the encryption algorithms and ciphers compute, We learned what their used for and their rough implementation, 
-        but ouside of this, nothing. So ontop of implememnting a research level encryption scheme, Ihad no basis to start my understanding of cryptography. This I would overcome and continue learning after I finished my capstone. I endedup modify some model I founds
-        slowly combining and mdifing them together to work with my data and gain the results I was looking. 
-        <h3>Results</h3>
-        I Achieved my desired result through trial and error, ending with better results on the encrypted data but at the cost of a drastic time increase. The prediction accuracy was higher on the ecrypted data then the un-encrypted data. The cost penalties do 
-        outweigh the results. from a couple seconds to around 5 minutes to complete. From one hundred megabytes to 2 gigabytes of Ram required to run their respective model. For a classical logistic regression model. 
-        <h3>Changes I would Make</h3>
-        After completing this project there are some changes I would like to make or wish I knew of while hacking away, other and better FHE libraries amd frameworks. Sush as <a href="https://github.com/tfhe/tfhe">TFHE</a> or <a href="https://docs.zama.ai/concrete-ml">concrete ML</a> by Zama AI.
-        Due to TENSeal beign older and from Microsoft it had more material about it and being implemented which is why I decided to use it. These newer libraries have modern featurea and easier implementations, such as working with scklearn models. 
-        </p>
-
-       </section>
-
-       <section id="content">
-        <p>The paper and slides are located under their respective section in the nav bar</p>
-        <h4>Code</h3>
-        <ul>
+    <nav class="project-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Matthew Townsend</div>
             <ul>
-                <li><a href="https://github.com/M01010100/Capstone_2024_NCS">github</a></li>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="projectIndex.html">📁 All Projects</a></li>
+                <li><a href="proj1.html" class="active">📄 Overview</a></li>
+                <li><a href="proj1_paper.html">📑 Paper</a></li>
+                <li><a href="proj1_slides.html">🎨 Slides</a></li>
+                <li><a href="https://github.com/M01010100/Capstone_2024_NCS" target="_blank">💻 GitHub</a></li>
             </ul>
-        </ul>
-       </section>
+        </div>
+    </nav>
 
+    <main>
+        <div class="container">
+            <section id="home">
+                <div class="content-card">
+                    <h1>Capstone: Privacy-Preserving Machine Learning Training</h1>
+                    <p class="project-meta">
+                        <strong>SUNY Polytechnic Institute Fall 2024</strong>
+                    </p>
+                    
+                    <div class="project-description">
+                        <p>
+                            In this project, I intended to learn about Machine Learning and ways to secure/increase privacy to start my journey into my master's degree and the field. It led me elsewhere—I went down the rabbit hole of Homomorphic Encryption and Secure Multi-Party Computation. I learned about the different types of encryption and how they can be used to secure data, to the point where I am more interested in Cryptography and the math behind it than Machine Learning itself. I have read papers, watched lectures and more on this subject.
+                        </p>
+                    </div>
 
-       <section id="Methods">
-        <h3>Library</h3>
-        <P>For this project I used the TenSEAL library, a python wrapper for the SEAL library by Microsoft.</P><br>
-        <h3>Model</h3>
-        <p>For the model I used a simple Logistic Regression model to perform basic fraud detection.</p><br>
-        <h3>Dataset</h3>
-        <p>The dataset consisted of 6 features but with nearly 40,000 sets. This allowed for a good vartiation when shuffling.</p>
-        </section>
-       <br>
-       <br>
+                    <h3>Constraints</h3>
+                    <p>
+                        For Capstone projects we select limitations to keep the scope of this project contained. I will admit I had very loose constraints due to my topic. The constraints I did apply were to use only Python for the language and keep it related to Machine Learning. The final and over-arching constraint is to keep the paper at a Freshman reading level. So for my project this meant leaving out any conversation on how the Math operates behind the blinds—I did mention the basics: algebraic structures and Polynomials.
+                    </p>
+
+                    <h3>Problems</h3>
+                    <p>
+                        One major problem I encountered outside of the constraints was the nature of the project. As an NCS major I received little education on how the encryption algorithms and ciphers compute. We learned what they're used for and their rough implementation, but outside of this, nothing. So on top of implementing a research-level encryption scheme, I had no basis to start my understanding of cryptography. This I would overcome and continue learning after I finished my capstone. I ended up modifying some models I found, slowly combining and modifying them together to work with my data and gain the results I was looking for.
+                    </p>
+
+                    <h3>Results</h3>
+                    <p>
+                        I achieved my desired result through trial and error, ending with better results on the encrypted data but at the cost of a drastic time increase. The prediction accuracy was higher on the encrypted data than the unencrypted data. The cost penalties do outweigh the results: from a couple seconds to around 5 minutes to complete, from one hundred megabytes to 2 gigabytes of RAM required to run their respective model, for a classical logistic regression model.
+                    </p>
+
+                    <h3>Changes I would Make</h3>
+                    <p>
+                        After completing this project there are some changes I would like to make or wish I knew of while hacking away: other and better FHE libraries and frameworks, such as <a href="https://github.com/tfhe/tfhe">TFHE</a> or <a href="https://docs.zama.ai/concrete-ml">Concrete ML</a> by Zama AI. Due to TENSeal being older and from Microsoft it had more material about it and being implemented, which is why I decided to use it. These newer libraries have modern features and easier implementations, such as working with sklearn models.
+                    </p>
+                </div>
+            </section>
+
+            <section id="content">
+                <div class="content-card">
+                    <h3>Project Resources</h3>
+                    <div class="resource-grid">
+                        <a href="proj1_paper.html" class="resource-link">
+                            <span>📑</span>
+                            <div>
+                                <strong>Research Paper</strong>
+                                <p>Complete academic documentation</p>
+                            </div>
+                        </a>
+                        <a href="proj1_slides.html" class="resource-link">
+                            <span>🎨</span>
+                            <div>
+                                <strong>Presentation Slides</strong>
+                                <p>Project presentation materials</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/M01010100/Capstone_2024_NCS" class="resource-link" target="_blank">
+                            <span>💻</span>
+                            <div>
+                                <strong>Source Code</strong>
+                                <p>Complete implementation on GitHub</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="Methods">
+                <div class="content-card">
+                    <h3>Implementation Details</h3>
+                    
+                    <div class="method-section">
+                        <h4>Library</h4>
+                        <p>For this project I used the TenSEAL library, a Python wrapper for the SEAL library by Microsoft.</p>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Model</h4>
+                        <p>For the model I used a simple Logistic Regression model to perform basic fraud detection.</p>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Dataset</h4>
+                        <p>The dataset consisted of 6 features but with nearly 40,000 sets. This allowed for good variation when shuffling.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="content-card text-center mt-2">
+                <p>
+                    <a href="projectIndex.html">← Back to All Projects</a> | 
+                    <a href="index.html">🏠 Home</a>
+                </p>
+            </div>
+        </div>
+    </main>
 </body>
+</html>

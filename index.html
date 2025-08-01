@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="index_style.css">
+    <script src="nav_mobile.js" defer></script>
 </head>
 <div id="top"></div>
 <header>
@@ -25,32 +26,46 @@
 </header>
 <body>
     <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#MajorProjects">Projects</a></li>
-            <li><a href="#Competitions">Competitions</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="nav-logo">Matthew Townsend</div>
+            <ul id="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#MajorProjects">Projects</a></li>
+                <li><a href="#Competitions">Competitions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
+
+    <main>
     <!-- About Section -->
     <section id="about">
-        <h2>Short Biography</h2>
-        <p>I am currently attending <a href="https://sunypoly.edu/">SUNY Polytechnic Institue</a> as a Computer Science Graduate Student studying the intersections of Machine Learning, Quantum Computing, and Cybersecurity.
-            I have a Bachelor's degree in Network Computer Security from SUNY Polytechnic Institue and an Associates in Computer Science: Cybersecurity from <a href="https://www.mvcc.edu/">MVCC</a>
-           At SUNY Poly I am the president of the NCS club on campus for the 2024-2025 academic year. As the club president, I am currently overseeing the development of a lab, the procurment of infrastructure (includes servers for VMs, storage, and AI), and extended 
-           development of the club's internal hackathon program. In addtion to my leadership of the NCS club I was asked to join the CS Club Leadership. I have competed at several hackathons such as the <a href="https://www.ncaecybergames.org/">NCAE Cybergames</a> (2022-2023) and the <a href="https://www.cnyhackathon.org/">CNY Hackathon</a> 
-           (2019-2021-2023-2024) and in the CNY I received the MVP award for team 7 in 2023. That was for overall team leadership and maintaining the team's Database infrastructure. Beyond the "Cyber" Hackathons 
-           I have also competed in several project-based hackathons such as <a href="https://gatehacks.cs.colagte.edu/">Gatehacks</a> (2024), where my team placed 3rd overall with our AI ASL interpreter. 
-           </p>
-           <br>
+        <div class="container">
+            <h2>Short Biography</h2>
+            <div class="content-card">
+                <p>I am currently attending <a href="https://sunypoly.edu/">SUNY Polytechnic Institue</a> as a Computer Science Graduate Student studying the intersections of Machine Learning, Quantum Computing, and Cybersecurity.
+                    I have a Bachelor's degree in Network Computer Security from SUNY Polytechnic Institue and an Associates in Computer Science: Cybersecurity from <a href="https://www.mvcc.edu/">MVCC</a>
+                   At SUNY Poly I am the president of the NCS club on campus for the 2024-2025 academic year. As the club president, I am currently overseeing the development of a lab, the procurment of infrastructure (includes servers for VMs, storage, and AI), and extended 
+                   development of the club's internal hackathon program. In addtion to my leadership of the NCS club I was asked to join the CS Club Leadership. I have competed at several hackathons such as the <a href="https://www.ncaecybergames.org/">NCAE Cybergames</a> (2022-2023) and the <a href="https://www.cnyhackathon.org/">CNY Hackathon</a> 
+                   (2019-2021-2023-2024) and in the CNY I received the MVP award for team 7 in 2023. That was for overall team leadership and maintaining the team's Database infrastructure. Beyond the "Cyber" Hackathons 
+                   I have also competed in several project-based hackathons such as <a href="https://gatehacks.cs.colagte.edu/">Gatehacks</a> (2024), where my team placed 3rd overall with our AI ASL interpreter. 
+                   </p>
+            </div>
+        </div>
     </section>
-    <section id="Credentials" >
-        <h2>Credentials</h2>
-        <br>
+    
+    <section id="Credentials">
+        <div class="container">
+            <h2>Credentials</h2>
             <ul>
-                <li><a href="">SUNY Polytechnic Institue</a>: Computer Science MS | 2025-Present</li>
+                <li><a href="https://sunypoly.edu/academics/majors-and-programs/ms-computer-science.html">SUNY Polytechnic Institue</a>: Computer Science MS | 2025-Present</li>
                 <ul>
-                    <li> Coursework: Quantum Networking, 3D Data Processing, Automata Computability </li>
+                    <li> Coursework: Quantum Networking, 3D Data Processing, Automata Computability, Interplanetary Networking, Porting </li>
                     <li> Groups: Club Funding Board - Chair (2024-2025) | NCS Club - President (2024-2025) | CS Club - Secretary (2024-2025) </li>
                 </ul>
                 <br>
@@ -66,81 +81,97 @@
                     <li> Groups: Cyberhawks (2021-2023) | Phi Theta Kappa (2021-2023)</li>
                 </ul>
             </ul>
-        <br>
-        <br>
-        <h2>Certifications</h2>
-        <br>
-        <ul>
-            <li><a href="https://www.coursera.org/share/8fe03f1f750622fa9122c6575893b3fc">Applied Cryptography</a> - University of Colorado: Dec 2024</li>
-            <li><a href="https://www.credly.com/badges/9fb0e7ee-3931-43e3-9020-cf4202359760/linked_in?t=sip8qh">Google Cybersecurity Certificate</a>: Aug 2024</li>
-        </ul>
-        <br>
+            
+            <h2>Certifications</h2>
+            <ul>
+                <li><a href="https://www.coursera.org/share/8fe03f1f750622fa9122c6575893b3fc">Applied Cryptography</a> - University of Colorado: Dec 2024</li>
+                <li><a href="https://www.credly.com/badges/9fb0e7ee-3931-43e3-9020-cf4202359760/linked_in?t=sip8qh">Google Cybersecurity Certificate</a>: Aug 2024</li>
+            </ul>
+        </div>
     </section>
      
     <!-- Projects Section -->
     <section id="MajorProjects">
-        <h2>Projects</h2>
-        <p>All Project can be view on <a href="projectIndex.html">Project Homepage</a></p>
-        <h3>Top Three</h3>
-        <div class="project">
-            <h3>Capstone: Privacy-Preserving Machine Learning Training</h3>
-            <p>(In progress) Analysis of various ways to make training more secure along with an implementation of Homomorphic Encryption on a basic ML model</p>
-            <a href="proj1.html">Read more...</a>
-        </div>
-        </div>
-        <div class="project">
-            <h3>Industrial Network Security</h3>
-            <p>Conducted with software such as open-plc and scadabr with a Raspberry Pi and a breadboard.</p>
-            <a href="proj2.html">Read more...</a>
-        </div>
-        <div class="project">
-            <h3>AI ASL Interpreter</h3>
-            <p>Created with a team at the gatehacks hackathon, Fall 2024</p>
-            <a href="proj3.html">Read more...</a>
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="content-card text-center">
+                <p>All Projects can be viewed on <a href="projectIndex.html">Project Homepage</a></p>
+            </div>
+            <h3>Top Three</h3>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Capstone: Privacy-Preserving Machine Learning Training</h3>
+                    <p>(In progress) Analysis of various ways to make training more secure along with an implementation of Homomorphic Encryption on a basic ML model</p>
+                    <a href="proj1.html">Read more...</a>
+                </div>
+                <div class="project">
+                    <h3>Industrial Network Security</h3>
+                    <p>Conducted with software such as open-plc and scadabr with a Raspberry Pi and a breadboard.</p>
+                    <a href="proj2.html">Read more...</a>
+                </div>
+                <div class="project">
+                    <h3>AI ASL Interpreter</h3>
+                    <p>Created with a team at the gatehacks hackathon, Fall 2024</p>
+                    <a href="proj3.html">Read more...</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Competitions Section -->
     <section id="Competitions">
-        <h2>Competitions:</h2>
-        <ul>
-            <li><h3>Gatehacks</h3></li>
-            <p>2024</p>
-            <br>
-            <li><h3>NCAE Cybergames</h3></li>
-            <p>2022-2023</p>
-            <br>
-            <li><h3>CNY Hackathon</h3></li>
-            <p>2019-2021-2023-2024</p>
-        </ul>
+        <div class="container">
+            <h2>Competitions</h2>
+            <ul>
+                <li>
+                    <h3>Gatehacks</h3>
+                    <p>2024</p>
+                </li>
+                <li>
+                    <h3>NCAE Cybergames</h3>
+                    <p>2022-2023</p>
+                </li>
+                <li>
+                    <h3>CNY Hackathon</h3>
+                    <p>2019-2021-2023-2024</p>
+                </li>
+            </ul>
+        </div>
     </section>
+    
     <!-- Blog Section -->
     <section id="Books & Writing">
-        <h2>Books & Writings</h2>
-        <article>
-            <h3>Books</h3>
-            <p>Security/ Computer related Books I have or currently reading</p>
-            <a href="blog2.html">Read more...</a>
-        </article>
-        <article>
-            <h3>Writings</h3>
-            <p>**** More to come soon ****</p>
-        </article>
-        
+        <div class="container">
+            <h2>Books & Writings</h2>
+            <div class="two-column">
+                <article>
+                    <h3>Books</h3>
+                    <p>Security/ Computer related Books I have or currently reading</p>
+                    <a href="blog2.html">Read more...</a>
+                </article>
+                <article>
+                    <h3>Writings</h3>
+                    <p>**** More to come soon ****</p>
+                </article>
+            </div>
+        </div>
     </section>
 
-    <section id = "contact">
-        <h2>Links</h2>
-        <br>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/matthew-townsend-59a1b126b/">LindedIn</a></li>
-            <li><a href="https://github.com/M01010100">Github</a>: M01010100</li>
-            <li><a href="https://www.coursera.org/user/17aef9ebe8ba5f29444aeddf9d62fdbe">Coursera</a></li>
-            <li><a href="mailto:MatthewTownsend03@protonmail.com">MatthewTownsend03@protonmail.com </a></li>
-        </ul>
-        <br>
-        <p>Return to <a href="#top">Top</a></p>
+    <section id="contact">
+        <div class="container">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/matthew-townsend-59a1b126b/">LinkedIn</a></li>
+                <li><a href="https://github.com/M01010100">Github: M01010100</a></li>
+                <li><a href="https://www.coursera.org/user/17aef9ebe8ba5f29444aeddf9d62fdbe">Coursera</a></li>
+                <li><a href="mailto:MatthewTownsend03@protonmail.com">MatthewTownsend03@protonmail.com</a></li>
+            </ul>
+            <p class="text-center mt-2">
+                <a href="#top">Return to Top</a>
+            </p>
+        </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -157,7 +188,7 @@
             ██╔████╔██║███████║   ██║      ██║   ███████║█████╗  ██║ █╗ ██║       ██║   ██║   ██║██║ █╗ ██║██╔██╗ ██║███████╗█████╗  ██╔██╗ ██║██║  ██║
             ██║╚██╔╝██║██╔══██║   ██║      ██║   ██╔══██║██╔══╝  ██║███╗██║       ██║   ██║   ██║██║███╗██║██║╚██╗██║╚════██║██╔══╝  ██║╚██╗██║██║  ██║
             ██║ ╚═╝ ██║██║  ██║   ██║      ██║   ██║  ██║███████╗╚███╔███╔╝       ██║   ╚██████╔╝╚███╔███╔╝██║ ╚████║███████║███████╗██║ ╚████║██████╔╝
-                         ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚══╝╚══╝        ╚═╝    ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝  ╚═══╝╚═════╝                                                                                                                                        
+                                                                                                                     ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚══╝╚══╝        ╚═╝    ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝  ╚═══╝╚═════╝                                                                                                                                        
         </pre>
     </footer>
 </body>
