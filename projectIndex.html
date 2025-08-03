@@ -6,15 +6,33 @@
     <title>Project Index - Matthew Townsend</title>
     <link rel="stylesheet" href="index_style.css">
     <script src="nav_mobile.js" defer></script>
+    <style>
+        header h1 {
+            color: #ffffff !important;
+            text-shadow: 1px 1px 1px rgb(255, 255, 255) !important;
+            position: relative;
+            z-index: 5;
+        }
+        
+        #projects h2 {
+            color: #ffffff !important;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5) !important;
+        }
+        section h3 {
+            color: #f7f7f7;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 
-<body>
+<body class="projects-page">
     <div id="top"></div>
     
-    <header style="background: white; color: #2c3e50; padding: 3rem 0;">
+    <header>
         <div class="container text-center">
-            <h1 style="font-size: 3rem; margin-bottom: 0.5rem; color: #2c3e50;">Project Portfolio</h1>
-            <p style="font-size: 1.2rem; color: #666; margin: 0;">Explore my technical projects and research work</p>
+            <h1 style="color:#ffffff !important; position: relative; z-index: 2;">Project Portfolio</h1>
+            <p style="font-size: 1.2rem; color: #f7f7f7; margin: 0;">Explore my technical projects and research work</p>
         </div>
     </header>
     <nav>
@@ -36,8 +54,8 @@
     <main>
         <section id="projects">
             <div class="container">
-                <h2>All Projects</h2>
-                
+                <h2 style="color: #34495e;">All Projects</h2>
+
                 <!-- Project 1: Capstone FHE -->
                 <div class="project-container">
                     <div class="project-header">

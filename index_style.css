@@ -203,8 +203,7 @@ section h2::after {
 }
 
 section h3 {
-    /* color: #34495e; */
-    color: #fff;
+    color: #34495e;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -639,6 +638,34 @@ footer pre {
     color: white !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.education-details {
+    margin-top: 10px;
+}
+
+.education-details p {
+    margin: 8px 0;
+}
+
+#Education .content-card, 
+#Certifications .content-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#Education .content-card:hover, 
+#Certifications .content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow), 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#Education h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#Education p {
+    margin-top: 0;
 }
 
 /* Responsive Design for Project Pages */
