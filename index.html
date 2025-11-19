@@ -9,13 +9,7 @@
 </head>
 <div id="top"></div>
 <header>
-        <pre>
-            ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗                                                                     
-            ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗                                                                    
-            ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║                                                                    
-            ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║                                                                    
-            ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝                                                                    
-            ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝                                                                     
+        <pre>                                                              
                                                                                                                                                        
             ███╗   ███╗ █████╗ ████████╗████████╗██╗  ██╗███████╗██╗    ██╗    ████████╗ ██████╗ ██╗    ██╗███╗   ██╗███████╗███████╗███╗   ██╗██████╗ 
             ████╗ ████║██╔══██╗╚══██╔══╝╚══██╔══╝██║  ██║██╔════╝██║    ██║    ╚══██╔══╝██╔═══██╗██║    ██║████╗  ██║██╔════╝██╔════╝████╗  ██║██╔══██╗
@@ -27,8 +21,7 @@
 <body>
     <nav>
         <div class="nav-container">
-            <div class="nav-logo">Matthew Townsend</div>
-            <ul id="nav-menu">
+            <ul id="nav-menu" > 
                 <li><a href="#MajorProjects">Projects</a></li>
                 <li><a href="#Education">Education</a></li>
                 <li><a href="#about">About</a></li>
@@ -36,15 +29,38 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-menu-toggle" id="mobile-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
 
     <main>
-    <!-- Projects Section -->
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About</h2>
+            <div class="content-card">
+                <img src="2025-11-19 13.34.59.jpg" alt="Matthew Townsend" class="about-image-float">
+
+                <p>I am a current Graduate Student at SUNY Polytechnic Institute studying Computer Science. 
+                    My research interests focus on machine learning security, data privacy, and the cryptographic applications of machine learning. 
+                    This interest began as an undergraduate, when these topics uniquely appealed to me in lectures. 
+                    For my undergraduate capstone, I investigated privacy-preserving machine learning, with an emphasis on Fully Homomorphic Encryption. 
+                    Now, I am exploring the cryptographic use of machine learning, specifically analyzing models for cryptanalysis of block ciphers and side-channel attacks.
+                </p>
+                <p>
+                    I am currently a Graduate assistant to Prof. Chen-Fu Chiang. 
+                    The classes assigned to me are CS100, Intro to Compute Seminar - Fall 2025, and CS477 Algorithms - Spring 2026
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Projects Section -->
     <section id="MajorProjects">
         <div class="container">
             <h2>Projects</h2>
@@ -60,6 +76,11 @@
                     <a href="proj2.html">Read more...</a>
                 </div>
                 <div class="project">
+                    <h3>Encrypt-Relay </h3>
+                    <p>The Encrypted Chat Relay is a secure communication system designed to facilitate private and encrypted messaging based in the terminal. </p>
+                    <a href="projRelay.html">Read more...</a>
+                </div>
+                <div class="project">
                     <h3>Frightful CTFs</h3>
                     <p>Created a series of Capture The Flag (CTF) challenges focused on Quantum fundementals and Basic Cryptography.</p>
                     <a href="proj6.html">Read more...</a>
@@ -70,14 +91,9 @@
                     <a href="proj3.html">Read more...</a>
                 </div>
                 <div class="project">
-                    <h3>Ranked Choice Voting --in Progress</h3>
-                    <p> Ranked choice voting algorithm used for data struc final --need to find input files from class</p>
+                    <h3>Ranked Choice Voting </h3>
+                    <p> Ranked choice voting algorithm created for data structure final</p>
                     <a href="proj_RCV.html">Read more...</a>
-                </div>
-                <div class="project">
-                    <h3>Homelab-ish</h3>
-                    <p>My current homelab setup, includes a server, VMs, and a few containers.</p>
-                    <a href="proj5.html">Read more...</a>
                 </div>
             </div>
         </div>
@@ -129,26 +145,11 @@
             </div>
         </div>
     </section>
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>Short Biography</h2>
-            <div class="content-card">
-                <p>I am currently attending <a href="https://sunypoly.edu/">SUNY Polytechnic Institue</a> as a Computer Science Graduate Student studying the intersections of Machine Learning, Quantum Computing, and Cybersecurity.
-                    I have a Bachelor's degree in Network Computer Security from SUNY Polytechnic Institue and an Associates in Computer Science: Cybersecurity from <a href="https://www.mvcc.edu/">MVCC</a>
-                   At SUNY Poly I am the president of the NCS club on campus for the 2024-2025 academic year. As the club president, I am currently overseeing the development of a lab, the procurment of infrastructure (includes servers for VMs, storage, and AI), and extended 
-                   development of the club's internal hackathon program. In addtion to my leadership of the NCS club I was asked to join the CS Club Leadership. I have competed at several hackathons such as the <a href="https://www.ncaecybergames.org/">NCAE Cybergames</a> (2022-2023) and the <a href="https://www.cnyhackathon.org/">CNY Hackathon</a> 
-                   (2019-2021-2023-2024) and in the CNY I received the MVP award for team 7 in 2023. That was for overall team leadership and maintaining the team's Database infrastructure. Beyond the "Cyber" Hackathons 
-                   I have also competed in several project-based hackathons such as <a href="https://gatehacks.cs.colagte.edu/">Gatehacks</a> (2024), where my team placed 3rd overall with our AI ASL interpreter. 
-                   </p>
-            </div>
-        </div>
-    </section>
 
     <!-- Blog Section -->
     <section id="Books & Writing">
         <div class="container">
-            <h2>Books & Writings</h2>
+            <h2>Misc</h2>
             <div class="two-column">
                 <article>
                     <h3>Books</h3>
@@ -178,7 +179,7 @@
                 </li>
                 <li>
                     <h3>CNY Hackathon</h3>
-                    <p>2019-2021-2023-2024</p>
+                    <p>2019-2021-2023-2024-2025</p>
                 </li>
             </ul>
         </div>
@@ -201,22 +202,5 @@
     </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <pre>
-            ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗                                                                     
-            ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗                                                                    
-            ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║                                                                    
-            ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║                                                                    
-            ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝                                                                    
-            ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝                                                                     
-                                                                                                                                                       
-            ███╗   ███╗ █████╗ ████████╗████████╗██╗  ██╗███████╗██╗    ██╗    ████████╗ ██████╗ ██╗    ██╗███╗   ██╗███████╗███████╗███╗   ██╗██████╗ 
-            ████╗ ████║██╔══██╗╚══██╔══╝╚══██╔══╝██║  ██║██╔════╝██║    ██║    ╚══██╔══╝██╔═══██╗██║    ██║████╗  ██║██╔════╝██╔════╝████╗  ██║██╔══██╗
-            ██╔████╔██║███████║   ██║      ██║   ███████║█████╗  ██║ █╗ ██║       ██║   ██║   ██║██║ █╗ ██║██╔██╗ ██║███████╗█████╗  ██╔██╗ ██║██║  ██║
-            ██║╚██╔╝██║██╔══██║   ██║      ██║   ██╔══██║██╔══╝  ██║███╗██║       ██║   ██║   ██║██║███╗██║██║╚██╗██║╚════██║██╔══╝  ██║╚██╗██║██║  ██║
-            ██║ ╚═╝ ██║██║  ██║   ██║      ██║   ██║  ██║███████╗╚███╔███╔╝       ██║   ╚██████╔╝╚███╔███╔╝██║ ╚████║███████║███████╗██║ ╚████║██████╔╝
-           ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚══╝╚══╝        ╚═╝    ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝  ╚═══╝╚═════╝</pre>
-    </footer>
 </body>
 </html>

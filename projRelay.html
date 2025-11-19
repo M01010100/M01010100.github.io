@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypted Chat Relay System - Matthew Townsend</title>
+    <link rel="stylesheet" href="index_style.css">
+    <script src="nav_mobile.js" defer></script>
+</head>
+
+<body>
+    <nav class="project-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Matthew Townsend</div>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="projectIndex.html">📁 All Projects</a></li>
+                <li><a href="projRelay.html" class="active">📄 Overview</a></li>
+                <li><a href="https://github.com/M01010100" target="_blank">💻 GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="overview">
+                <div class="content-card">
+                    <h1>Encrypted Chat Relay System</h1>
+                    
+                    <div class="project-meta">
+                        <strong>Secure Multi-Client Network Communication</strong>
+                    </div>
+                    
+                    <div class="project-description">
+                        <p>
+                            A real-time encrypted chat relay system implemented in C that demonstrates secure network communication using socket programming. The system features a central server that broadcasts messages between multiple clients using AES-256-CBC encryption to ensure message confidentiality across the network.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="how-it-works">
+                <div class="content-card">
+                    <h2>How the Relay System Works</h2>
+                    
+                    <div class="method-section">
+                        <h4>Server Architecture</h4>
+                        <p>The server acts as a central relay hub, listening on port 3490 for incoming client connections. It maintains a list of connected clients (up to 10) and broadcasts each message to all other connected clients, creating a group chat environment.</p>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Client Communication</h4>
+                        <p>Each client connects to the server and can send messages that are timestamped and encrypted before being relayed to other clients. The client application handles both sending user input and receiving/decrypting messages from other users in real-time.</p>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Encryption Protocol</h4>
+                        <p>Messages are encrypted using AES-256-CBC (Advanced Encryption Standard with 256-bit keys in Cipher Block Chaining mode) via OpenSSL. Each message is encrypted on the server before broadcast, ensuring that data transmitted over the network remains confidential.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features">
+                <div class="content-card">
+                    <h2>Key Features</h2>
+                    
+                    <div class="resource-grid">
+                        <div class="resource-link">
+                            <span>🔐</span>
+                            <div>
+                                <strong>AES-256 Encryption</strong>
+                                <p>Military-grade encryption protects all messages in transit</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>🔄</span>
+                            <div>
+                                <strong>Real-Time Relay</strong>
+                                <p>Instant message broadcasting to all connected clients</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>👥</span>
+                            <div>
+                                <strong>Multi-Client Support</strong>
+                                <p>Handles up to 10 simultaneous client connections</p>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <span>⏱️</span>
+                            <div>
+                                <strong>Timestamped Messages</strong>
+                                <p>Each message includes timestamp for conversation tracking</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="compilation">
+                <div class="content-card">
+                    <h2>How to Compile</h2>
+                    
+                    <div class="method-section">
+                        <h4>Prerequisites</h4>
+                        <p>The system requires a Unix-like environment (Linux, macOS, or Windows with WSL) and the following:</p>
+                        <ul>
+                            <li>GCC compiler</li>
+                            <li>OpenSSL development libraries (<code>libssl-dev</code>)</li>
+                            <li>POSIX socket support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Compilation Commands</h4>
+                        <p><strong>Compile the server:</strong></p>
+                        <pre><code>gcc -o server server.c -lssl -lcrypto -Wall</code></pre>
+                        
+                        <p><strong>Compile the client:</strong></p>
+                        <pre><code>gcc -o client client.c -Wall</code></pre>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Automated Scripts (Windows)</h4>
+                        <p>PowerShell scripts are provided for automatic compilation and execution:</p>
+                        <ul>
+                            <li><code>start_server.ps1</code> - Compiles and starts the server</li>
+                            <li><code>start_client.ps1 [hostname]</code> - Compiles and connects a client</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="operation">
+                <div class="content-card">
+                    <h2>How to Operate</h2>
+                    
+                    <div class="method-section">
+                        <h4>Starting the Server</h4>
+                        <p><strong>Using PowerShell script:</strong></p>
+                        <pre><code>.\start_server.ps1</code></pre>
+                        
+                        <p><strong>Manual execution:</strong></p>
+                        <pre><code>./server</code></pre>
+                        
+                        <p>The server will listen on port 3490 and wait for client connections.</p>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Connecting Clients</h4>
+                        <p><strong>Using PowerShell script (local):</strong></p>
+                        <pre><code>.\start_client.ps1 localhost</code></pre>
+                        
+                        <p><strong>Using PowerShell script (remote):</strong></p>
+                        <pre><code>.\start_client.ps1 192.168.1.100</code></pre>
+                        
+                        <p><strong>Manual execution:</strong></p>
+                        <pre><code>./client [server_hostname]</code></pre>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Using the Chat System</h4>
+                        <ol>
+                            <li>Start the server first in one terminal</li>
+                            <li>Launch one or more clients in separate terminals</li>
+                            <li>Type messages in any client and press Enter</li>
+                            <li>Messages appear in all other connected clients</li>
+                            <li>Type <code>quit</code> to disconnect a client</li>
+                            <li>Press Ctrl+C to stop the server</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="testing">
+                <div class="content-card">
+                    <h2>Testing Scenarios</h2>
+                    
+                    <div class="method-section">
+                        <h4>Local Testing (Same Machine)</h4>
+                        <p>Open two terminals:</p>
+                        <ul>
+                            <li><strong>Terminal 1:</strong> <code>.\start_server.ps1</code></li>
+                            <li><strong>Terminal 2:</strong> <code>.\start_client.ps1 localhost</code></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Network Testing (Multiple Machines)</h4>
+                        <p><strong>On server machine:</strong></p>
+                        <ol>
+                            <li>Start the server: <code>.\start_server.ps1</code></li>
+                            <li>Note the IP address: <code>ipconfig</code> (Windows) or <code>ifconfig</code> (Linux)</li>
+                        </ol>
+                        
+                        <p><strong>On client machine(s):</strong></p>
+                        <pre><code>.\start_client.ps1 192.168.1.XXX</code></pre>
+                        <p>Replace XXX with the server's IP address.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="implementation">
+                <div class="content-card">
+                    <h2>Technical Implementation</h2>
+                    <div class="project-description">
+                        <p>
+                            The system is implemented in C using standard POSIX sockets for network communication and OpenSSL for cryptographic operations. The server uses a broadcast architecture where each incoming message is encrypted and relayed to all connected clients except the sender. The source code demonstrates practical network programming concepts including socket creation, connection handling, select-based I/O multiplexing, and secure encryption practices.
+                        </p>
+                    </div>
+                    
+                    <div class="resource-grid">
+                        <a href="https://github.com/M01010100/Encrypt-Relay" class="resource-link" target="_blank">
+                            <span>💻</span>
+                            <div>
+                                <strong>GitHub Repository</strong>
+                                <p>View the complete source code and documentation</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="content-card text-center mt-2">
+                <p>
+                    <a href="projectIndex.html">← Back to All Projects</a> | 
+                    <a href="index.html">🏠 Home</a>
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
