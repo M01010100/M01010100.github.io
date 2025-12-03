@@ -90,9 +90,6 @@
             display: flex;
             align-items: center;
             padding: 8rem 2rem 4rem;
-            background: radial-gradient(ellipse at top right, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
-                        radial-gradient(ellipse at bottom left, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
-                        var(--dark);
             position: relative;
             overflow: hidden;
         }
