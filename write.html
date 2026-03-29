@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing - Portfolio</title>
+    <link rel="stylesheet" href="write_style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="write.html" class="active">Writing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Writing Portfolio</h1>
+            <p>Essays, Articles, and Research Papers</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="writing">
+            <div class="container">                
+                <!-- Writing Entry 1 -->
+                <article class="writing-entry">
+                    <div class="writing-header">
+                        <h3>Post-Quantum Digital Signatures</h3>
+                        <p class="writing-meta">
+                            <span class="date">December 2025</span> • 
+                            <span class="category">Survey/Final</span>
+                        </p>
+                    </div>
+                    
+                    <div class="writing-content">
+                        <p>Abstract—The foundational security of modern Public-Key Infrastructure (PKI), reliant on algorithms like RSA and Elliptic Curve Cryptography (ECC), is critically threatened by the anticipated emergence of powerful quantum computers capable of executing Shor's algorithm. To ensure the long-term integrity and non-repudiation of digital communication, an urgent transition to Post-Quantum Cryptography (PQC) is required.
+                        </p>
+                        <p>Index Terms—Post Quantum Cryptography, Digital Signatures, Hash-Based Signatures, R-LWE, Lattice, Public Key Infrastructure.</p>                        
+                        
+                    </div>
+                    
+                    <div class="writing-actions">
+                        <a href="Papers/PQ_DS.pdf" class="pdf-link" target="_blank">
+                            <span>📄</span> View PDF
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Writing Entry 2 -->
+                <article class="writing-entry">
+                    <div class="writing-header">
+                        <h3>Capture The Flag</h3>
+                        <p class="writing-meta">
+                            <span class="date">March 2025 - V1.0</span> • 
+                            <span class="category">Hackathon Document</span>
+                        </p>
+                    </div>
+                    
+                    <div class="writing-content">
+                        <p>A series of questions that can be adapted into CTFs (Capture The Flag challenges) for Hackathons or cyber competitions.</p>
+
+                        <div class="writing-image-center">
+                            <img src="Papers/ascii-art(1).png" alt="Research visualization">
+                            <p class="image-caption">Figure 1: Ascii Characterization</p>
+                        </div>
+                        
+                        <p>Topics range from fundamentals to graduate level study. Designed to be a one stop solution.</p>
+                        <p>Section 1: Q-ducks, Intro to quantum computing.
+                            <br>1. Basic Matrix Operations
+                            <br>2. Code Simulation of Quantum Gates
+                            <br>3. bra-ket notation
+                        </p>
+                        <p>Section 2: Crypto Voyage
+                            <br>1. Enigma Cipher
+                            <br>2. Diffie-Hellman Key Exchange
+                            <br>3. Hash-based Signatures
+                    </div>
+                    
+                    <div class="writing-actions">
+                        <a href="Papers/The Art of Frightful CTFs-3.pdf" class="pdf-link" target="_blank">
+                            <span>📄</span> View PDF
+                        </a>
+                        
+                    </div>
+                </article>
+
+                <!-- Full Text Section (Hidden by default, shown when clicked) -->
+                <div id="full-text-1" class="full-text-section">
+                    <div class="full-text-header">
+                        <h3>Title of Your First Writing Piece - Full Text</h3>
+                        <a href="#writing" class="close-text">✕ Close</a>
+                    </div>
+                    
+                    <div class="full-text-content">
+                        <h4>Introduction</h4>
+                        <p>Your complete text begins here. You can structure it with headings and paragraphs.</p>
+                        
+                        <div class="writing-image-center">
+                            <img src="path/to/image1.jpg" alt="Description">
+                            <p class="image-caption">Detailed caption for context</p>
+                        </div>
+                        
+                        <h4>Main Body</h4>
+                        <p>Continue with your full text content...</p>
+                        
+                        <h4>Conclusion</h4>
+                        <p>Your concluding thoughts...</p>
+                        
+                        <div class="writing-actions">
+                            <a href="path/to/document.pdf" class="pdf-link" target="_blank">
+                                <span>📄</span> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="full-text-2" class="full-text-section">
+                    <div class="full-text-header">
+                        <h3>Title of Your Second Writing Piece - Full Text</h3>
+                        <a href="#writing" class="close-text">✕ Close</a>
+                    </div>
+                    
+                    <div class="full-text-content">
+                        <p>Full text content for your second piece...</p>
+                        <!-- Add more content as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
