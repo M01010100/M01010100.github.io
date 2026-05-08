@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walsh Decomposition Network - Matthew Townsend</title>
+    <link rel="stylesheet" href="index_style.css">
+    <script src="nav_mobile.js" defer></script>
+</head>
+
+<body>
+    <nav class="project-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Matthew Townsend</div>
+            <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="WDN.html" class="active"> Overview</a></li>
+                <li><a href="https://github.com/M01010100/WDN" target="_blank"> GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="home">
+                <div class="content-card">
+                    <h1>Walsh Decomposition Network (WDN) Experiments</h1>
+                    <p class="project-meta">
+                        <strong>Cryptanalysis and Walsh Spectra Recovery</strong>
+                    </p>
+                    
+                    <div class="project-description">
+                        <p>
+                            This project explores the use of Neural Networks to explicitly learn the Walsh spectrum of cryptographic distinguishing functions. By implementing a Walsh Decomposition Network (WDN), we can compare the Walsh-Hadamard Transform (WHT) characteristics of ciphers like SIMON and SPECK, extracting their canonical forms and analyzing their spectrum stability.
+                        </p>
+                    </div>
+
+                    <h3>Problem: Computational Bottlenecks</h3>
+                    <p>
+                        Classical Fast Walsh-Hadamard Transforms scale at O(n &middot; 2<sup>n</sup>) in time and require massive O(2<sup>n</sup>) memory to evaluate a Boolean function across all points. Furthermore, computing degree profiles using iterative structures quickly leads to computational hangs on large blocks sizes. Our solution embeds the Walsh basis characters directly into a neural network layer, explicitly learning the unnormalized coefficients in a manageable O(T &middot; batch) forward pass.
+                    </p>
+
+                    <h3>Results</h3>
+                    <p>
+                        The network was successfully trained over 55 epochs, allowing us to directly compare the outputs of SIMON and SPECK. The model effectively identified 151 high-order terms (degree 3) unique to the nonlinear SPECK cipher compared to the linear structure of SIMON.
+                        <br><br>
+                        One major breakthrough during analysis was the Cipher Symmetry Orbit Decomposition, which yielded a <strong>126.34&times; compression ratio</strong> of the spectrum representation. We compressed 43,586 raw basis terms down to 345 orbit representatives, uncovering profound structural redundancies in the cipher's data.
+                    </p>
+
+                    <h3>Stability Findings</h3>
+                    <p>
+                        By running multiple experiments across random seed initializations, evaluating 43,745 total unique configurations, the models extracted exactly <strong>1,540 perfectly stable terms</strong> across all runs. The WDN also robustly identified critical bits of advantage driving distinguishing probabilities consistently.
+                    </p>
+                </div>
+            </section>
+
+            <section id="Methods">
+                <div class="content-card">
+                    <h3>Implementation Details</h3>
+                    
+                    <div class="method-section">
+                        <h4>Architecture</h4>
+                        <p>The core WDN utilizes a fixed basis function layer populated by non-trainable Walsh characters. A downstream mapping translates these into a dense set of trainable polynomial coefficients predicting the target binary label efficiently.</p>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Tested Ciphers</h4>
+                        <p>The network evaluated 64-bit plaintext blocks under key influences processed by the SIMON and SPECK cryptographic algorithms, targeting differentials against random permutations.</p>
+                    </div>
+                    
+                    <div class="method-section">
+                        <h4>Libraries</h4>
+                        <p>Implemented primarily in PyTorch to capitalize on autograd and batched network training, utilizing SciPy modules for reference classical Walsh-Hadamard transform checks on sub-blocks.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="Resources">
+                <div class="content-card">
+                    <h3>Project Resources</h3>
+                    <ul>
+                        <li><strong>Thesis Paper:</strong> <a href="https://www.researchgate.net/publication/404602294_Walsh_Decomposition_Networks_Canonical_Representations_and_Interpretability_for_Neural_Distinguishers_in_Cryptanalysis?channel=doi&linkId=69fd32c2e48e8125fa383c67&showFulltext=true" target="_blank">Thesis-final-5_7.pdf</a></li>
+                        <li><strong>Cipher Generation:</strong> <a href="https://github.com/M01010100/WDN/blob/main/Code/cipher_generation.py" target="_blank">cipher_generation.py</a> - Implements SPECK32/64 and SIMON32/64 encryptions and generates labeled datasets for WDN training.</li>
+                        <li><strong>Dataset Caching:</strong> <a href="https://github.com/M01010100/WDN/blob/main/Code/cache_datasets.py" target="_blank">cache_datasets.py</a> - Caches generated datasets to disk for faster recurring training sessions.</li>
+                        <li><strong>Cache Setup Script:</strong> <a href="https://github.com/M01010100/WDN/blob/main/Code/setup_cache.sh" target="_blank">setup_cache.sh</a> - Quick setup script for automating the dataset cache generation.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="Visualizations">
+                <div class="content-card">
+                    <h3>Visualizations</h3>
+                    <div style="text-align: center;">
+                        <figure style="margin-bottom: 2rem;">
+                            <img src="Papers/WDN/5_Cross_Estimator_Rank_Correlation.png" alt="Cross-Estimator Rank Correlation" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <figcaption style="margin-top: 0.5rem; font-size: 0.9em; color: #555;"><strong>Cross-Estimator Rank Correlation:</strong> Classical WHT vs. WDN</figcaption>
+                        </figure>
+                        <figure style="margin-bottom: 2rem;">
+                            <img src="Papers/WDN/4_Coefficient_Stability_Plot.png" alt="Coefficient Stability Across Random Seeds" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <figcaption style="margin-top: 0.5rem; font-size: 0.9em; color: #555;"><strong>Coefficient Stability:</strong> Variance across completely random seeds for top terms</figcaption>
+                        </figure>
+                        <figure style="margin-bottom: 2rem;">
+                            <img src="Papers/WDN/2_Degree_Power_Comparison.png" alt="Degree Profile Comparison" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <figcaption style="margin-top: 0.5rem; font-size: 0.9em; color: #555;"><strong>Degree Profile Comparison:</strong> SIMON vs SPECK spectral power distributions</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <div class="content-card text-center mt-2">
+                <p>
+                    <a href="index.html">🏠 Home</a>
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
